@@ -1,0 +1,69 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Réservation - Cartoon Agency</title>
+
+</head>
+<body>
+
+  <div class="nav">
+        <h3>Cartoon Agency</h3>
+        <ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+          <li><a href="./compte.html"><img src="../data/img/compte.png" alt="login"></a></li>
+        </ul>
+      </div>
+  <div class="container">
+    <div class="title">
+      <h1>Réservation de <t id="destination"></t></h1>
+      <h4>Préparez vous a vivre une experience inoubliable !</h4>
+    </div>
+    <form action="./recapitulatif.html" method="get">
+      <input type="hidden" name="destination" value="">
+      <label for="lastname">Nom :</label>
+      <input type="text" name="lastname" placeholder="Votre Nom" id="" required>
+      <label for="firstname">Prénom :</label>
+      <input type="text" name="firstname" placeholder="Votre Prénom" id="" required>
+      <label for="email">Email :</label>
+      <input type="email" name="email" placeholder="Votre Email" id="" required>
+      <label for="phone">Téléphone :</label>
+      <input type="text" name="phone" placeholder="Votre Téléphone" id="">
+      <label for="startdate">Date de début :</label>
+      <input type="date" name="startdate" id="">
+      <label for="enddate">Date de fin :</label>
+      <input type="date" name="enddate" id="">
+      <label for="children">Nombre d'enfant (-12 ans) :</label>
+      <select name="children" id="" required>
+          <option value="" hidden>--Nombre d'enfant (-12 ans)--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+      </select>
+      <label for="adult">Nombre d'adulte (+13 ans) :</label>
+      <select name="adult" id="" required>
+          <option value="" hidden>--Nombre d'adulte (+13 ans)--</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+      </select>
+      <label for="breakfast">Je veux un petit dejeuner :</label>
+      <input type="checkbox" name="breakfast" id="">
+      <label for="informations">Information complémentaire :</label>
+      <input type="text" name="informations" id="">
+      <button type="submit">Valider</button>
+    </form>
+  </div>
+  <div class="footer"></div>
+  <script src="../js/reservation.js"></script>
+
+</body>
+</html>
