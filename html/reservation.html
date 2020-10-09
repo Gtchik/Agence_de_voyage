@@ -21,7 +21,8 @@
       <h1>Réservation de <t id="destination"></t></h1>
       <h4>Préparez vous a vivre une experience inoubliable !</h4>
     </div>
-    <form action="./recapitulatif.html" method="get">
+    <script src="../js/reservation.js"></script>
+    <form action="./recapitulatif.html" method="get" onchange="maj()">
       <input type="hidden" name="destination" value="">
       <label for="lastname">Nom :</label>
       <input type="text" name="lastname" placeholder="Votre Nom" id="" required>
@@ -59,11 +60,18 @@
       <input type="checkbox" name="breakfast" id="">
       <label for="informations">Information complémentaire :</label>
       <input type="text" name="informations" id="">
+      <t id="prix">(rentré des valeurs)</t>
       <button type="submit">Valider</button>
     </form>
   </div>
   <div class="footer"></div>
-  <script src="../js/reservation.js"></script>
-
+  <!-- <script type="text/javascript">
+  function maj(){
+    console.log("a");
+    let children = document.getElementsByName('children').value;
+    let adult = document.getElementsByName('adult').value;
+    document.getElementById("prix").innerHTML = parseInt(adult)*50 + parseInt(children)*25;
+  }
+  </script> -->
 </body>
 </html>
