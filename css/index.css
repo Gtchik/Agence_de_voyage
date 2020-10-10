@@ -1,0 +1,112 @@
+
+.voyage{
+  display: flex;
+height: 900px;
+margin-bottom: 100px;
+align-items: center;
+background-color: rgb(244, 244, 244);
+background-size: cover;
+color: rgb(255, 255, 255);
+width: 100%
+}
+.voyage-caraibes{
+  background-image: url('../data/img/Villa.jpg');
+}
+.voyage-forêt{
+  background-image: url('../data/img/forêt.jpg');
+}
+.voyage-montagne{
+  background-image: url('../data/img/montagne.jpg');
+}
+.slider-div{
+  width: 100%;
+  height: 100%;
+}
+.txt{
+  background-color: rgba(255, 255, 255, 0.42);
+  border-radius: 10%;
+  padding: 3%;
+  margin-left: 10%;
+  color: black;
+
+  width:25%;
+}
+.txt > h1{
+  font-size: 5rem;
+  font-family: 'Bangers', cursive;
+}
+
+
+
+.btn{
+  padding: 16px 35px;
+  border-radius: 0px;
+  background-color: rgb(26, 27, 31);
+  transition-property: background-color, opacity, color;
+  transition-duration: 400ms, 400ms, 400ms;
+  transition-timing-function: ease, ease, ease;
+  color: white;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+  float: right;
+}
+
+
+.filtres{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.travels{
+  width: 66%;
+  margin:auto;
+  margin-top: 5%;
+}
+
+
+.travel{
+  margin-bottom: 40px;
+}
+.travel:hover >.travel-img > img{
+  transform: scale(1.1);
+  filter: grayscale(70%);
+   -webkit-filter: grayscale(70%);
+   -moz-filter: grayscale(70%);
+   -ms-filter: grayscale(70%);
+   -o-filter: grayscale(70%);
+}
+.travel-img{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+.travel-img > img{
+  height: 300px;
+  transition: 1s;
+ filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  -ms-filter: grayscale(0%);
+  -o-filter: grayscale(0%);
+}
+.travel-description{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+.travel-description > h2{
+  font-family: 'Bangers', cursive;
+  margin-bottom: 0;
+}
+.travel-description > p{
+  margin-top: 0;
+}

@@ -1,0 +1,54 @@
+html,
+body {
+    margin: 0px;
+    height: 100%;
+    font-family: 'Oswald', sans-serif;
+}
+*{
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: 'Bangers', cursive;
+  font-size: 3rem;
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+.color-black{
+  color:black;
+}
+
+.center{
+  text-align: center;
+}
+.bottom-line::after {
+    content: "";
+    display: block;
+    width: 48px;
+    border-bottom: 3px solid #e8e8e8;
+    margin: 15px auto 15px;
+}
+.col-2, .col-3, .col-4, .col-6, .col-1l6{
+  float: left;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.col-2{
+  width: 50%;
+}
+.col-3{
+  width: 33.333333%;
+}
+.col-4{
+  width: 25%;
+}
+.col-6{
+  width: 16.66666%;
+}
+.col-1l6{
+  width: 83.333333%;
+}

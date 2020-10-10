@@ -18,9 +18,7 @@ function findGetParameter(parameterName) {
 }
 
 function maj(){
-  console.log("a");
-  let children = document.getElementsByName('children').value;
-  let adult = document.getElementsByName('adult').value;
-  console.log(adult);
-  document.getElementById("prix").innerHTML = parseInt(adult)*50 + parseInt(children)*25;
+  let children = document.getElementsByName('children')[0].value;
+  let adult = document.getElementsByName('adult')[0].value;
+  document.getElementById("prix").innerHTML = adult*50 + children*25;
 }
