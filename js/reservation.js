@@ -1,3 +1,4 @@
+var price = 0;
 fetch('../js/allTravels.json').then(function(response) {
   return response.json();
 }).then(function(json) {
@@ -15,7 +16,13 @@ function intilialise(x){
       break;
     }
   }
-  document.
+  var style = document.querySelector('body').style;
+  style.setProperty('--background', 'url(.'+travel.src_img+')');
+  var style = document.querySelector('.container').style;
+  style.setProperty('--background', 'url(.'+travel.src_img+')');
+  document.getElementById("destination").innerHTML = travel.title;
+  price = travel.price;
+  priceCalcul()
 }
 
 // Function use for find a get in the URL
@@ -32,8 +39,12 @@ function findGetParameter(parameterName) {
     return result;
 }
 
-function maj(){
+function priceCalcul(){
   let children = document.getElementsByName('children')[0].value;
   let adult = document.getElementsByName('adult')[0].value;
-  document.getElementById("prix").innerHTML = adult*50 + children*25;
+  if (document.getElementsByName('children')[0].value || document.getElementsByName('adult')[0].value){
+    const prix = adult*price + children*price*0.4 ;
+    document.getElementById("prix").innerHTML = " | "+ prix +"€";
+  }
+
 }

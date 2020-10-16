@@ -1,5 +1,5 @@
 body{
-  background-image: url("../data/img/chateau.jpg");
+  background-image: var(--background);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +22,7 @@ body{
 }
 
 .container::before {
-    background: url('../data/img/chateau.jpg');
+    background-image: var(--background);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -53,6 +53,7 @@ body{
 }
 .title{
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 form{

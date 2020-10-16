@@ -8,9 +8,39 @@ fetch('js/allTravels.json').then(function(response) {
   console.log('Fetch problem: ' + err.message);
 });
 
+function weatherInfo( city,id ) {
+  var key = 'cc4c934758953165818e1d857307bbae';
+  console.log("b")
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+ city +'&units=metric&appid=' + key)
+  .then(function(resp) { return resp.json() }) // Convert data to json
+  .then(function(data) {
+    console.log("a",data);
+    initialiseWeather(id,data.main.temp,data.weather[0].icon)
+  })
+  .catch(function() {
+    // catch any errors
+  });
+}
+
+function initialiseWeather(id,temp,icon){
+  for (travel of allTravels){
+    if (travel.id==id){
+      travel.temp=String(Math.round(temp));
+      travel.temp_icon=String(icon);
+      break
+    }
+  }
+  if (id==allTravels.length){
+    applyFilter();
+  }
+}
+
 function intilialise(x){
   var allTravels = x;
-  applyFilter();
+  for (travel of allTravels){
+    weatherInfo(travel.city, travel.id);
+  }
+
 }
 
 slidr.create('slidr-div', {
@@ -47,6 +77,7 @@ function changeTravel(travels){
     <div class="col-3">
         <div class="travel">
           <div class="travel-img">
+          <div class="temp"><img src="https://openweathermap.org/img/wn/`+travel.temp_icon+`@2x.png" class="weather-icon"> <br>`+travel.temp+`°C</div>
             <img src="`+travel.src_img+`" alt="">
           </div>
           <div class="travel-description">

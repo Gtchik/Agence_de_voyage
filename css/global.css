@@ -14,6 +14,11 @@ h1{
   font-size: 3rem;
 }
 
+h2{
+  font-family: 'Bangers', cursive;
+  font-size: 2rem;
+}
+
 p{
   font-size: 1.5rem;
 }
@@ -38,6 +43,15 @@ button:hover{
     border-bottom: 3px solid #e8e8e8;
     margin: 15px auto 15px;
 }
+
+.bottom-line-black::after {
+    content: "";
+    display: block;
+    width: 48px;
+    border-bottom: 3px solid #2e2e2e;
+    margin: 15px auto 15px;
+}
+
 .col-1, .col-2, .col-3, .col-4, .col-6, .col-1l6{
   float: left;
   min-height: 1px;
