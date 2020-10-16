@@ -13,15 +13,22 @@
 </head>
 
 <body>
-
-  <div class="nav">
+  <header>
     <h3>Cartoon Agency</h3>
     <ul>
       <li><a href="./index.html">Accueil</a></li>
       <li><a href="./html/contact.html">Contact et à propos</a></li>
       <li><a href=""><img src="./data/img/compte.png" alt=""></a></li>
     </ul>
-  </div>
+  </header>
+
+  <script type="text/javascript">
+    window.addEventListener("scroll", function(){
+      var header = document.querySelector("header")
+      header.classList.toggle("sticky", window.scrollY > 0)
+    })
+  </script>
+
   <div class="container" id="top">
     <section class="slider" id="slidr-div" style="dislay: block">
       <div class="voyage voyage-caraibes" data-slidr="one">
