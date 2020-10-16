@@ -1,0 +1,74 @@
+[
+  {
+    "id":"1",
+    "src_img":"./data/img/Villa.jpg",
+    "title":"Villa Caraïbes",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"50",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"2",
+    "src_img":"./data/img/forêt.jpg",
+    "title":"FORÊT",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"75",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"3",
+    "src_img":"./data/img/montagne.jpg",
+    "title":"MONTAGNE",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"10",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"4",
+    "src_img":"./data/img/mer.jpg",
+    "title":"LA MER",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"120",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"5",
+    "src_img":"./data/img/lune.jpg",
+    "title":"LA LUNE",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"65",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"6",
+    "src_img":"./data/img/chateau.jpg",
+    "title":"CHATEAU",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"30",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"7",
+    "src_img":"./data/img/cimetiere.jpg",
+    "title":"CIMETIERE",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"45",
+    "breakfirst":"yes",
+    "animal":"yes"
+  },
+  {
+    "id":"8",
+    "src_img":"./data/img/villa_mont.jpg",
+    "title":"VILLA RETRAITE",
+    "desc":"Lorem ipsum dolor sit amet.",
+    "price":"85",
+    "breakfirst":"yes",
+    "animal":"yes"
+  }
+]

@@ -1,7 +1,22 @@
+fetch('../js/allTravels.json').then(function(response) {
+  return response.json();
+}).then(function(json) {
+  allTravels = json;
+  intilialise(allTravels);
+}).catch(function(err) {
+  console.log('Fetch problem: ' + err.message);
+});
 
-document.getElementById("destination").innerHTML = findGetParameter("destination");
-document.getElementsByName('destination').value = findGetParameter("destination");
-
+function intilialise(x){
+  var allTravels = x;
+  var id = findGetParameter("id");
+  for(travel of allTravels){
+    if (travel.id == id){
+      break;
+    }
+  }
+  document.
+}
 
 // Function use for find a get in the URL
 function findGetParameter(parameterName) {

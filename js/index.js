@@ -1,3 +1,18 @@
+
+fetch('js/allTravels.json').then(function(response) {
+  return response.json();
+}).then(function(json) {
+  allTravels = json;
+  intilialise(allTravels);
+}).catch(function(err) {
+  console.log('Fetch problem: ' + err.message);
+});
+
+function intilialise(x){
+  var allTravels = x;
+  applyFilter();
+}
+
 slidr.create('slidr-div', {
   direction: 'horizontal',
   fade: false,
@@ -21,56 +36,6 @@ slidr.create('slidr-div', {
 
 }).start();
 
-var allTravels = [
-  {
-    'src_img':'./data/img/Villa.jpg',
-    'title':'Villa Caraïbes',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'50'
-  },
-  {
-    'src_img':'./data/img/forêt.jpg',
-    'title':'FORÊT',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'75'
-  },
-  {
-    'src_img':'./data/img/montagne.jpg',
-    'title':'MONTAGNE',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'10'
-  },
-  {
-    'src_img':'./data/img/mer.jpg',
-    'title':'LA MER',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'120'
-  },
-  {
-    'src_img':'./data/img/lune.jpg',
-    'title':'LA LUNE',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'65'
-  },
-  {
-    'src_img':'./data/img/chateau.jpg',
-    'title':'CHATEAU',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'30'
-  },
-  {
-    'src_img':'./data/img/cimetiere.jpg',
-    'title':'CIMETIERE',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'45'
-  },
-  {
-    'src_img':'./data/img/villa_mont.jpg',
-    'title':'VILLA RETRAITE',
-    'desc':'Lorem ipsum dolor sit amet.',
-    'price':'85'
-  }
-];
 
 
 function changeTravel(travels){
@@ -78,7 +43,7 @@ function changeTravel(travels){
   for(var travel of travels)
   {
     document.getElementsByClassName('alltravels')[0].innerHTML += `
-  <a href="./html/reservation.html?destination=`+travel.title+`" class="color-black">
+  <a href="./html/reservation.html?id=`+travel.id+`" class="color-black">
     <div class="col-3">
         <div class="travel">
           <div class="travel-img">
@@ -95,7 +60,7 @@ function changeTravel(travels){
 }
 
 function applyFilter(){
-  changeTravel(`<h3>Loading...<h3>`);
+  document.getElementsByClassName('alltravels')[0].innerHTML="<h3>Loading...<h3>";
   //Contient l'ensemble des filtres existant
   var filters = [
     {
@@ -142,7 +107,7 @@ function checkFilter(filters,travel){
      // &&
      // 2. window[filter.operator]() j'appelle la fonction correspondante a l'opérateur
      //    je met en parametre le contenue de mon input et la valeur dans séjour
-     //    Exemple : inf(parseInt(input:low_price), parseInt(travel.price))
+     //    Exemple :  inf(parseInt(travel.price),parseInt(input:low_price))
      //              ici je regarde si le contenu de l'input (transformé en int) est plus petit que le prix du voyage (transformé en int).
 
     if (document.getElementsByName(filter.name)[0].value && !window[filter.operator](travelVal,inputVal)){
@@ -152,4 +117,5 @@ function checkFilter(filters,travel){
   return true;
 }
 
-applyFilter();
+
+document.cookie = "username=John Doe; expires=Thu, 18 Dec 2020 12:00:00 UTC";

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Oswald:wght@300&display=swap");
 html,
 body {
     margin: 0px;
@@ -17,6 +18,12 @@ p{
   font-size: 1.5rem;
 }
 
+button{
+  border:0;
+}
+button:hover{
+  cursor: pointer;
+}
 .color-black{
   color:black;
 }
@@ -31,11 +38,14 @@ p{
     border-bottom: 3px solid #e8e8e8;
     margin: 15px auto 15px;
 }
-.col-2, .col-3, .col-4, .col-6, .col-1l6{
+.col-1, .col-2, .col-3, .col-4, .col-6, .col-1l6{
   float: left;
   min-height: 1px;
   padding-right: 15px;
   padding-left: 15px;
+}
+.col-1{
+  width: 100%;
 }
 .col-2{
   width: 50%;
@@ -56,4 +66,30 @@ p{
   .col-2, .col-3, .col-4, .col-6, .col-1l6{
     width: 100%;
   }
+}
+.btn{
+  padding: 8px 17px;
+  background-color: rgb(26, 27, 31);
+  transition-property: background-color, opacity, color;
+  transition-duration: 400ms, 400ms, 400ms;
+  transition-timing-function: ease, ease, ease;
+  color: white;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.btn-xxl{
+  padding: 16px 35px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 2px;
+}
+.right{
+  float: right;
+}
+.center{
+text-align: center;
 }

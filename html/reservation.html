@@ -4,6 +4,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Réservation - Cartoon Agency</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/reservation.css">
+  <link rel="stylesheet" href="../css/navbarre.css">
 
 </head>
 <body>
@@ -21,57 +24,76 @@
       <h1>Réservation de <t id="destination"></t></h1>
       <h4>Préparez vous a vivre une experience inoubliable !</h4>
     </div>
-    <script src="../js/reservation.js"></script>
+
     <form action="./recapitulatif.html" method="get" onchange="maj()">
       <input type="hidden" name="destination" value="">
-      <label for="lastname">Nom :</label>
-      <input type="text" name="lastname" placeholder="Votre Nom" id="" required>
-      <label for="firstname">Prénom :</label>
-      <input type="text" name="firstname" placeholder="Votre Prénom" id="" required>
-      <label for="email">Email :</label>
-      <input type="email" name="email" placeholder="Votre Email" id="" required>
-      <label for="phone">Téléphone :</label>
-      <input type="text" name="phone" placeholder="Votre Téléphone" id="">
-      <label for="startdate">Date de début :</label>
-      <input type="date" name="startdate" id="">
-      <label for="enddate">Date de fin :</label>
-      <input type="date" name="enddate" id="">
-      <label for="children">Nombre d'enfant (-12 ans) :</label>
-      <select name="children" id="" required>
-          <option value="" hidden>--Nombre d'enfant (-12 ans)--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-      </select>
-      <label for="adult">Nombre d'adulte (+13 ans) :</label>
-      <select name="adult" id="" required>
-          <option value="" hidden>--Nombre d'adulte (+13 ans)--</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-      </select>
-      <label for="breakfast">Je veux un petit dejeuner :</label>
-      <input type="checkbox" name="breakfast" id="">
-      <label for="informations">Information complémentaire :</label>
-      <input type="text" name="informations" id="">
-      <t id="prix">(rentré des valeurs)</t>
-      <button type="submit">Valider</button>
+      <label class="col-2">
+        <span class="label-text">Nom</span>
+        <input type="text" name="lastname" required>
+      </label>
+      <label class="col-2">
+        <span class="label-text">Prénom</span>
+        <input type="text" name="firstname" required>
+      </label>
+      <label class="col-1">
+        <span class="label-text">Email</span>
+        <input type="text" name="email" required>
+      </label>
+      <label class="col-1">
+        <span class="label-text">Téléphone</span>
+        <input type="text" name="lasphonetname">
+      </label class="col-1">
+      <label class="col-2">
+        <span class="label-text">Date de début</span>
+        <input type="text" name="startdate" required>
+      </label>
+      <label class="col-2">
+        <span class="label-text">Date de fin</span>
+        <input type="text" name="enddate" required>
+      </label>
+      <label class="col-2">
+        <span class="label-text">Nombre d'enfant (-12 ans)</span>
+        <select name="children" id="" required>
+            <option value="" hidden>--Nombre d'enfant (-12 ans)--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+      </label>
+      <label class="col-2">
+        <span class="label-text">Nombre d'adulte (+13 ans)</span>
+        <select name="adult" id="" required>
+            <option value="" hidden>--Nombre d'adulte (+13 ans)--</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+      </label>
+      <label>
+        <span class="label-text">Plus d'info</span>
+        <input type="text" name="informations">
+      </label>
+      <label class="checkbox">
+        <span class="label-text">Je veux un petit dejeuner</span>
+        <input type="checkbox" name="breakfast">
+      </label>
+
+      <span class="label-text"><t id="prix">(rentré des valeurs)</t></span>
+
+      <div class="center">
+        <button type="submit" class="btn">Valider</button>
+      </div>
+
     </form>
   </div>
   <div class="footer"></div>
-  <!-- <script type="text/javascript">
-  function maj(){
-    console.log("a");
-    let children = document.getElementsByName('children').value;
-    let adult = document.getElementsByName('adult').value;
-    document.getElementById("prix").innerHTML = parseInt(adult)*50 + parseInt(children)*25;
-  }
-  </script> -->
+
+  <script src="../js/reservation.js"></script>
 </body>
 </html>
