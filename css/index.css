@@ -60,12 +60,16 @@ width: 100%
   position: -webkit-sticky;
   position: sticky;
   top: 10px;
+  height: 250px;
+  background-color: rgb(187, 187, 187);
+  border-radius: 10%;
 }
 
 .travels{
   width: 66%;
   margin:auto;
   margin-top: 5%;
+  display: flex;
 }
 
 

@@ -49,8 +49,13 @@
         <div class="center">
           <h1 class="bottom-line">Tous Nos Voyages</h1>
           <div class="col-6 filtres">
-            <h3>Filtres</h3>
-            <input type="text" na>
+            <div class="">
+              <h3>Filtres</h3>
+              <from onchange="applyFilter()">
+                <input type="number" name="low_price" id="" onKeyup="applyFilter()">
+                <input type="text" name="title" onKeyup="applyFilter()">
+              </from>
+            </div>
           </div>
           <div class="col-1l6 alltravels"></div>
 
